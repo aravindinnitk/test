@@ -1,0 +1,7 @@
+SELECT id,name,marks, 
+    CASE WHEN (marks > 90 ) then A+'
+    WHEN (marks > 70  && marks <= 90 ) then 'A'
+    WHEN (marks > 50  && marks <= 70 ) then  'B'
+    WHEN (marks >= 40  && marks <= 50 ) then  'C'
+    ELSE 'Fail'
+    END AS grade  FROM students;
